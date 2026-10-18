@@ -1,3 +1,9 @@
+/*/*
+ * 1. 数字：原代码传入 0, 9，应传入字符 '0', '9'。
+ * 2. 长度判断：<= 10，应改为 >= 10。
+ * 3. 范围边界：原代码小于，改为 <= 包含边界。
+ * 4. 删除了checked
+ */
 #include <iostream>
 #include <string>
 
@@ -32,3 +38,13 @@ int main() {
                       ? "VALID" : "INVALID") << '\n';
     return 0;
 }
+/*输入	正确输出
+Li Wang Bb23456781	VALID
+Li Wang Bb234567812	VALID
+Li Wang Aaabcdefg9	VALID
+Li Wang Zzabcdefg0	VALID
+Li Wang Bb2345678	INVALID
+Li Wang bb23456781	INVALID
+Li Wang BB23456781	INVALID
+Li Wang Bbabcdefgh	INVALID
+Li Wang BbLi234567	INVALID*/
